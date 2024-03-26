@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    
+    
+    <main>
+
+        <section id="calculadora">
+            <div id="pai">
+
+                <div class="visor">
+
+                    <section>
+                        <input id="display" class="display" type="text" disabled>
+                    </section>
+
+                </div>
+                <div class="organizador">
+                    <div class="teclado">
+                        <section class="cima">
+                            <button class="tecladoNum" onclick="adicionarNumero(7)">7</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(8)">8</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(9)">9</button>
+                        </section>
+                        <section>
+                            <button class="tecladoNum" onclick="adicionarNumero(4)">4</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(5)">5</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(6)">6</button>
+                        </section>
+                        <section>
+                            <button class="tecladoNum" onclick="adicionarNumero(1)">1</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(2)">2</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(3)">3</button>
+                        </section>
+                        <section>
+                            <button class="tecladoNum" onclick="mudarSinal()">+/-</button>
+                            <button class="tecladoNum" onclick="adicionarNumero(0)">0</button>
+                            <button class="tecladoNum" onclick="adicionarNumero('.')">.</button>
+                        </section>
+                    </div>
+
+                    <div class="operadores">
+                        <section class="cima">
+                            <button class="tecladoOper"  onclick="limparTudo()">CE</button>
+                            <button class="tecladoOper" onclick="limparVisor()">C</button>
+                            <button class="tecladoOper" onclick="apagarUltimo()"><=</button>
+                        </section>
+                        <section>
+                            <button class="tecladoOper" onclick="selecionarOperacao('1/x'), calcularResultado()">¹/x</button>
+                            <button class="tecladoOper" onclick="selecionarOperacao('sqrt(x)'), calcularResultado()">√x</button>
+                            <button class="tecladoOper" onclick="selecionarOperacao('^')">x²</button>
+                        </section>
+                        <section>
+                            <button class="tecladoOper" onclick="selecionarOperacao('*')">x</button>
+                            <button class="tecladoOper" onclick="selecionarOperacao('/')">÷</button>
+                            <button class="tecladoOper" onclick="selecionarOperacao('%')">%</button>
+                        </section>
+                        <section>
+                            <button class="tecladoOper" onclick="selecionarOperacao('+')">+</button>
+                            <button class="tecladoOper" onclick="selecionarOperacao('-')">-</button>
+                            <button class="tecladoOper" onclick="calcularResultado()">=</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+<script src="/assets/script/funcoes.js"></script>
+<script src="/assets/script/script.js"></script>
+
+</html>
